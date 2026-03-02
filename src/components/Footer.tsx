@@ -124,7 +124,7 @@ export default function Footer() {
                   </svg>
                   <span>support@gigoc.com</span>
                 </li>
-                <li>Yaound&eacute;, Cameroon</li>
+                <li>Limbe, Cameroon</li>
                 <li>Mon &ndash; Sat, 8am &ndash; 6pm</li>
               </ul>
             </div>
