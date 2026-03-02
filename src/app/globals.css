@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #F8FAFC;
+  --bg-soft: #F1F5F9;
+
+  --primary: #1e4a95;
+  --primary-soft: #EAF2FF;
+
+  --text-main: #2d4162;
+  --text-soft: #54595f;
+
+  --border-soft: #E2E8F0;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+
+body {
+  background: #f0f0f0;
+  color: var(--text-main);
+  font-family: system-ui, sans-serif;
+}
+
+.soft-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid var(--border-soft);
+}
+
+/* Hero section bg: white on mobile, desktop image on md+ */
+.hero-section {
+  background: #fdfdfd;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    background-image: url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Floating icon animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 4s ease-in-out 1.5s infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
