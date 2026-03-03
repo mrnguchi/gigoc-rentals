@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="soft-card rounded-[0.4rem] flex items-center justify-between px-3 md:px-6 py-3">
 
           {/* Logo — always on the left */}
-          <div className="flex-start -mr-4">
+          <div className="flex-start cursor-pointer -mr-4">
             <img src="/gigoc-logo.png" alt="GiGOC" className="h-10 w-auto" />
           </div>
 

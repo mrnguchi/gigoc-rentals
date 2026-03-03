@@ -138,7 +138,7 @@ export default function Home() {
           {/* Section heading + View all */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-[var(--text-main)]">Available Cars</h2>
-            <a href="#" className="text-sm font-medium text-[var(--primary)] border border-[var(--primary)] px-4 py-1.5 rounded-[0.4rem] hover:bg-[var(--primary-soft)] transition">
+            <a href="/browse-cars" className="text-sm font-medium text-[var(--primary)] border border-[var(--primary)] px-4 py-1.5 rounded-[0.4rem] hover:bg-[var(--primary-soft)] transition">
               View all
             </a>
           </div>
