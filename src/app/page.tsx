@@ -82,15 +82,15 @@ export default function Home() {
             </div>
 
             {/* Search bar — mobile: 5th, desktop: 4th */}
-            <div className="order-5 md:order-4 w-full md:w-11/12">
+            <div className="order-5 md:order-4  w-full md:w-11/12">
               <form className="w-full">
-                <div className="flex flex-row items-center border border-[var(--border-soft)] rounded-lg overflow-hidden bg-white shadow-[0_4px_16px_rgba(0,0,0,0.10)] md:shadow-none">
+                <div className="flex h-[3rem] flex-row items-center border border-[var(--border-soft)] rounded-lg overflow-hidden bg-white shadow-[0_4px_16px_rgba(0,0,0,0.10)] md:shadow-none">
                   <input
                     aria-label="search"
                     className="flex-1 px-4 py-2.5 md:py-3 bg-transparent placeholder:text-[var(--text-soft)] text-sm outline-none"
                     placeholder="Search cars, brands or locations"
                   />
-                  <button type="submit" className="flex cursor-pointer items-center justify-center bg-[var(--primary)] text-white px-5 py-2.5 md:py-3 shrink-0">
+                  <button type="submit" className="flex h-full cursor-pointer items-center justify-center bg-[var(--primary)] rounded-[0.5rem] text-white px-5 py-2.5 md:py-3 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                       <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="2" />

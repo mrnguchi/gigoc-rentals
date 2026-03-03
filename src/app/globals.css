@@ -46,6 +46,15 @@ body {
   }
 }
 
+/* Hide scrollbar but keep scroll behaviour */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Floating icon animations */
 .animate-float {
   animation: float 3s ease-in-out infinite;

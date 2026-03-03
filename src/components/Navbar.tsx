@@ -1,11 +1,20 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-const NAV_LINKS = ["Home", "Browse Cars", "List Your Car", "About Us"];
+const NAV_LINKS = [
+  { label: "Home",         href: "/" },
+  { label: "Browse Cars",  href: "/browse-cars" },
+  { label: "List Your Car",href: "#" },
+  { label: "About Us",     href: "#" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : href !== "#" && pathname.startsWith(href);
 
   return (
     <nav className="sticky top-4 z-50">
@@ -19,25 +28,23 @@ export default function Navbar() {
 
           {/* Nav links — desktop only */}
           <div className="hidden md:flex items-center gap-1 text-[17px]">
-            {NAV_LINKS.map((link) => {
-              const isActive = activeLink === link;
+            {NAV_LINKS.map(({ label, href }) => {
+              const active = isActive(href);
               return (
-                <a
-                  key={link}
-                  href="#"
-                  onClick={() => setActiveLink(link)}
+                <Link
+                  key={label}
+                  href={href}
                   className={`relative px-3 py-1.5 rounded-lg transition-colors ${
-                    isActive
+                    active
                       ? "text-[var(--primary)] font-medium"
                       : "text-[var(--text-soft)] hover:text-[var(--primary)] hover:bg-[var(--primary-soft)]"
                   }`}
                 >
-                  {link}
-                  {/* Short underline indicator — only on active */}
-                  {isActive && (
+                  {label}
+                  {active && (
                     <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-3/5 h-[2px] rounded-full bg-[var(--primary)]" />
                   )}
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -74,21 +81,21 @@ export default function Navbar() {
         {/* Mobile dropdown menu — absolutely positioned so it overlays content */}
         {menuOpen && (
           <div className="md:hidden absolute top-full left-4 right-4 z-50 soft-card mt-2 rounded-[0.4rem] px-4 py-4 flex flex-col gap-1 text-sm">
-            {NAV_LINKS.map((link) => {
-              const isActive = activeLink === link;
+            {NAV_LINKS.map(({ label, href }) => {
+              const active = isActive(href);
               return (
-                <a
-                  key={link}
-                  href="#"
-                  onClick={() => { setActiveLink(link); setMenuOpen(false); }}
+                <Link
+                  key={label}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
                   className={`px-3 py-2 rounded-lg transition-colors ${
-                    isActive
+                    active
                       ? "text-[var(--primary)] font-medium bg-[var(--primary-soft)]"
                       : "text-[var(--text-soft)] hover:text-[var(--primary)] hover:bg-[var(--primary-soft)]"
                   }`}
                 >
-                  {link}
-                </a>
+                  {label}
+                </Link>
               );
             })}
             <hr className="border-[var(--border-soft)] my-2" />

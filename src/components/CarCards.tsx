@@ -22,7 +22,7 @@ export default function CarCard({ image, name, location, price, carClass, distan
 
       {/* Image — all 4 corners rounded via inner border-radius + overflow-hidden wrapper */}
       <div className="relative w-full h-[20rem] p-1">
-        <div className="relative w-full h-full rounded-2xl overflow-hidden">
+        <div className="relative w-full h-full rounded-[0.9rem] overflow-hidden">
           <img src={image} alt={name} className="w-full h-full object-cover" />
 
           {/* Top-left: car class badge */}
