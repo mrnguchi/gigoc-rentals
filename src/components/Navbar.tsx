@@ -52,7 +52,7 @@ export default function Navbar() {
           {/* Right side: actions on desktop, hamburger on mobile */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4">
-              <a href="#" className="text-[17px] font-medium text-[var(--text-soft)] hover:text-[var(--text-main)] transition-colors">Login</a>
+              <a href="/browse-cars" className="text-[17px] font-medium text-[var(--text-soft)] hover:text-[var(--text-main)] transition-colors">Login</a>
               <button className="bg-[var(--primary)] text-white px-4 py-2 rounded-[0.4rem] shadow-soft hover:opacity-90 transition">
                 Rent a Car
               </button>

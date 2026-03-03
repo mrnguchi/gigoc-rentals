@@ -55,9 +55,9 @@ export default function Home() {
 
             {/* CTA — mobile: 3rd, desktop: 5th */}
             <div className="order-3 md:order-5 flex flex-row gap-3 md:gap-4">
-              <button className="flex-1 cursor-pointer md:flex-none bg-[var(--primary)] text-white px-6 md:px-10 py-2.5 md:py-3 rounded-[0.4rem] shadow-soft hover:opacity-90 transition text-sm md:text-base">
+              <a href="/browse-cars" className="flex-1 cursor-pointer md:flex-none bg-[var(--primary)] text-white px-6 md:px-10 py-2.5 md:py-3 rounded-[0.4rem] shadow-soft hover:opacity-90 transition text-sm md:text-base text-center">
                 Rent a Car
-              </button>
+              </a>
               <button className="flex-1 cursor-pointer md:flex-none border border-[var(--border-soft)] px-6 md:px-10 py-2.5 md:py-3 rounded-[0.4rem] bg-white hover:bg-[var(--bg-main)] transition text-sm md:text-base">
                 List Your Car
               </button>
